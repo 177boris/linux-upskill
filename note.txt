@@ -1,0 +1,55 @@
+################################
+SYSYEM INFO 
+################################
+
+lsb_release -a
+
+uname -a - will also print the system information and it can show some interesting things like kernel version, hardware platform, etc.
+
+uptime will show you how long the system has been running. It kinda makes the weird numbers you get from cat /proc/uptime a lot more readable.
+
+whoami / who / whois / w
+
+lshw - hardware info 
+lscpu - to display information about the CPU architecture
+lsblk - list block devices
+lspci - list all PCI devices
+lsusb - list all USB devices
+
+
+################################
+MEMORY AND CPU USAGE
+################################
+
+free -h - check the amount of memory used in the system
+vmstat - get memory statistics
+
+top - task manager 
+htop - interactive task manager
+
+ps -eo pcpu,pid,user,args | sort -r -k1 | less
+
+df -h - to see disk space usage
+du -h - if you want to estimate the size of your folders
+
+iostat -d -x interval count - disk utilisation
+
+
+################################
+NETWORK USAGE
+################################
+
+ifconfig - get general idea of your network interfaces and their IP addresses by using 
+ip address - won’t show you bandwidth usage
+
+netstat -i / -tulpn / -peanut - shows bandwidth usage in a static view
+ifstat - continuous view 
+sudo iftop -i [eth0] - more traffic info, substitute [] for desired network interface
+
+
+################################
+SSH
+################################
+
+ssh user@<ip address>
+ssh -i ~/.ssh/id_rsa user@192.123.321.99

@@ -52,4 +52,4 @@ SSH
 ################################
 
 ssh user@<ip address>
-ssh -i ~/.ssh/id_rsa user@192.123.321.99
+ssh -i ~/.ssh/<private key name> user@<ip address>
